@@ -1,0 +1,25 @@
+
+
+
+  <div ng-controller="TeamsController">
+  <form>
+    <input type="text" ng-model="newTeam.name" placeholder="Add Team">
+    <input type="submit" ng-click="addTeam()">
+  </form>
+  
+  <table>
+    <tr>
+      <td>Team</td>
+      <td>Actions</td>
+    </tr>
+
+    <tr id= "teams_list" ng-repeat="team in teams track by $index">
+      <td>{{team.name}}</td> 
+      <td><button ng-click="removeTeam(team)">Remove Team</button></td>
+    </tr>
+
+  </table>
+
+
+
+  </div>

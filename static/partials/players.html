@@ -1,0 +1,20 @@
+
+  <h2>Add Players</h2>
+  <div ng-controller="PlayersController">
+    <form>
+      <input type="text" ng-model="newPlayer.name" placeholder="Add player">
+      <input type="submit" ng-click="addPlayer()">
+    </form>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Actions</td>
+      </tr>
+        
+      <tr id= "players_list" ng-repeat="player in players track by $index">
+        <td>{{player.name}}</td> 
+        <td><button ng-click="removePlayer(player)">Remove Player</button></td>
+      </tr>
+
+    </table>
+  </div>
